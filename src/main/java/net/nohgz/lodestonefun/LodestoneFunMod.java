@@ -11,19 +11,23 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.nohgz.lodestonefun.registry.common.item.ItemRegistry;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(LodestoneFun.MODID)
-public class LodestoneFun
+@Mod(LodestoneFunMod.MODID)
+public class LodestoneFunMod
 {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "lodestonefun";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public LodestoneFun()
+    public LodestoneFunMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ItemRegistry.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
