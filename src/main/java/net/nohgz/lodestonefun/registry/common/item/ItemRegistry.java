@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.nohgz.lodestonefun.common.item.BoomStick;
 import net.nohgz.lodestonefun.common.item.ParticleStick;
 import net.nohgz.lodestonefun.registry.common.item.tabs.CreativeTabRegistry;
 
@@ -20,6 +21,7 @@ public class ItemRegistry {
 
     // debugging stuffs
     public static final RegistryObject<Item> PARTICLE_STICK = ITEMS.register("particle_stick", () -> new ParticleStick(DEBUG_PROPERTIES()));
+    public static final RegistryObject<Item> BOOM_STICK = ITEMS.register("boom_stick", () -> new BoomStick(DEBUG_PROPERTIES()));
 
 
     public static void register(IEventBus eventBus) {
