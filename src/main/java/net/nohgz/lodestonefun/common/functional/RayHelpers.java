@@ -8,11 +8,11 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
 public class RayHelpers {
-    public static BlockHitResult blockRayTraceResult(Level world, Player player, ClipContext.Fluid fluidMode) {
+    public static BlockHitResult blockRayTraceResult(Level world, Player player, ClipContext.Fluid fluidMode, double range) {
 
         // grug want talk with big brain who made stupid variable
 
-        double range = 30;
+        if (range > 30) range = 30;
 
         float playerXRot = player.getXRot();
         float playerYRot = player.getYRot();

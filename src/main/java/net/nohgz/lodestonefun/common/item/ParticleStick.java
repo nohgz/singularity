@@ -28,7 +28,7 @@ public class ParticleStick extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        BlockHitResult ray = RayHelpers.blockRayTraceResult(level, player, ClipContext.Fluid.NONE);
+        BlockHitResult ray = RayHelpers.blockRayTraceResult(level, player, ClipContext.Fluid.NONE,10f);
         Vec3 lookPos = ray.getLocation();
 
         WorldParticleEffects.spawnThingParticles(level, lookPos);

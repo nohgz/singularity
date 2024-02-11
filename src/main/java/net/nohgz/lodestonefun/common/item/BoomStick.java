@@ -15,6 +15,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod;
 import net.nohgz.lodestonefun.client.vfx.ShakeEffects;
+import net.nohgz.lodestonefun.client.vfx.WorldParticleEffects;
 import net.nohgz.lodestonefun.common.functional.RayHelpers;
 import team.lodestar.lodestone.handlers.ScreenshakeHandler;
 import team.lodestar.lodestone.systems.easing.Easing;
@@ -30,12 +31,13 @@ public class BoomStick extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        BlockHitResult ray = RayHelpers.blockRayTraceResult(level, player, ClipContext.Fluid.NONE);
+        BlockHitResult ray = RayHelpers.blockRayTraceResult(level, player, ClipContext.Fluid.NONE, 50f);
         Vec3 lookPos = ray.getLocation();
 
-        ShakeEffects.thugShaker(1,1);
+        WorldParticleEffects.spawnBoomParticle(level, lookPos);
+        ShakeEffects.thugShaker(5,0.45f);
 
-        level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.GENERIC_EXPLODE, SoundSource.PLAYERS, 1.0F, 2.0F);
+        level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.GENERIC_EXPLODE, SoundSource.PLAYERS, 1.0F, 0.5F);
         return super.use(level,player,hand);
     }
 
