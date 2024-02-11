@@ -1,5 +1,6 @@
 package net.nohgz.lodestonefun.client.vfx;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import team.lodestar.lodestone.registry.common.particle.LodestoneParticleRegistry;
