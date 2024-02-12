@@ -1,14 +1,17 @@
 package net.nohgz.lodestonefun.client.vfx;
 
+import net.minecraft.client.particle.ParticleRenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.nohgz.lodestonefun.registry.client.ParticleRegistry;
 import team.lodestar.lodestone.registry.common.particle.LodestoneParticleRegistry;
 import team.lodestar.lodestone.systems.easing.Easing;
 import team.lodestar.lodestone.systems.particle.WorldParticleBuilder;
 import team.lodestar.lodestone.systems.particle.data.ColorParticleData;
 import team.lodestar.lodestone.systems.particle.data.GenericParticleData;
 import team.lodestar.lodestone.systems.particle.data.SpinParticleData;
+import team.lodestar.lodestone.systems.particle.world.LodestoneWorldParticleRenderType;
 
 import java.awt.*;
 import java.util.Random;
@@ -33,22 +36,18 @@ public class WorldParticleEffects {
                 .spawn(level,pos.x,pos.y,pos.z);
     }
 
-    public static void spawnBoomParticle (Level level, Vec3 pos) {
+    public static void spawnBoomParticle (Level level, Vec3 pos, Color colorStart, Color colorEnd) {
 
         Random rand = new Random();
 
-        Color startingBoomColor = new Color(252, 151, 95);
-        Color endingBoomColor = new Color(87, 19, 6);
-
-        Color startingSmokeColor = new Color(28, 28, 28);
-        Color endingSmokeColor = new Color(0, 0, 0);
-
+        Color startingSmokeColor = new Color(42, 42, 42);
+        Color endingSmokeColor = new Color(30, 30, 30);
 
         //actual boom
-        WorldParticleBuilder.create(LodestoneParticleRegistry.WISP_PARTICLE)
-                .setScaleData(GenericParticleData.create(2f * rand.nextFloat(1.5f,2.5f)).build())
+        WorldParticleBuilder.create(LodestoneParticleRegistry.SMOKE_PARTICLE)
+                .setScaleData(GenericParticleData.create(2f * rand.nextFloat(1.5f,2.5f)).setEasing(Easing.EXPO_OUT).build())
                 .setTransparencyData(GenericParticleData.create(1.0f, 0.0f).build())
-                .setColorData(ColorParticleData.create(startingBoomColor,endingBoomColor).setCoefficient(1.4f).setEasing(Easing.QUARTIC_OUT).build())
+                .setColorData(ColorParticleData.create(colorStart,colorEnd).setCoefficient(1.4f).setEasing(Easing.QUARTIC_OUT).build())
                 .setSpinData(SpinParticleData.create(0.0f,0.01f).setSpinOffset((level.getGameTime() * 0.1f) % 6.28f).setEasing(Easing.QUARTIC_OUT).build())
                 .setLifetime(60)
                 .addMotion(0,0,0)
@@ -67,23 +66,25 @@ public class WorldParticleEffects {
         ;
 
         //aftermath smoke
-        WorldParticleBuilder.create(LodestoneParticleRegistry.SMOKE_PARTICLE)
+        WorldParticleBuilder.create(LodestoneParticleRegistry.WISP_PARTICLE)
                 .setScaleData(GenericParticleData.create(rand.nextFloat(1.5f,2f), 3.5f * rand.nextFloat(1.5f,2f)).build())
                 .setTransparencyData(GenericParticleData.create(1.0f, 0.0f).build())
                 .setColorData(ColorParticleData.create(startingSmokeColor,endingSmokeColor).setCoefficient(1.4f).setEasing(Easing.QUARTIC_OUT).build())
-                .setSpinData(SpinParticleData.create(0.0f,0.0f).setSpinOffset((level.getGameTime() * 0.2f) % 6.28f).setEasing(Easing.QUARTIC_OUT).build())
+                .setSpinData(SpinParticleData.create(0.0f,0.02f).setSpinOffset((level.getGameTime() * 0.1f) % 6.28f).setEasing(Easing.QUARTIC_OUT).build())
+                .setRenderType(LodestoneWorldParticleRenderType.LUMITRANSPARENT)
                 .setLifetime(350)
+                .setRandomMotion(0.01,0,0.01)
                 .addMotion(0,0.12f,0)
                 .enableNoClip()
                 .setGravity(0.01f)
-                .setRandomOffset(10.0)
+                .setRandomOffset(8.0)
                 .spawn(level,pos.x,pos.y,pos.z)
                 .repeat(
                         level,
                         pos.x,
-                        pos.y,
+                        pos.y+1,
                         pos.z,
-                        100
+                        25
                 )
 
         ;

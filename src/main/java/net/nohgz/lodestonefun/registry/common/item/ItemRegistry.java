@@ -25,7 +25,6 @@ public class ItemRegistry {
     public static final RegistryObject<Item> BOOM_STICK = ITEMS.register("boom_stick", () -> new BoomStick(DEBUG_PROPERTIES()));
     public static final RegistryObject<Item> FLASH_STICK = ITEMS.register("flash_stick", () -> new FlashStick(DEBUG_PROPERTIES()));
 
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
