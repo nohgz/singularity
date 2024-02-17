@@ -15,7 +15,6 @@ import static team.lodestar.lodestone.registry.client.LodestoneShaderRegistry.re
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = LodestoneFunMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ShaderRegistry {
-
     public static ShaderHolder END_PORTAL = new ShaderHolder(LodestoneFunMod.lodestoneFunPath("rendertype_end_portal"), DefaultVertexFormat.POSITION_COLOR_TEX, "Speed", "Zoom", "Distortion", "Intensity", "Wibble");
 
     @SubscribeEvent

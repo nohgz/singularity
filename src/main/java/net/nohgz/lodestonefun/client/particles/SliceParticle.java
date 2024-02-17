@@ -5,7 +5,6 @@ import net.minecraft.client.particle.*;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import team.lodestar.lodestone.systems.particle.world.WorldParticleOptions;
 
 @OnlyIn(Dist.CLIENT)
 public class SliceParticle extends TextureSheetParticle {

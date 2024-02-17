@@ -2,6 +2,7 @@ package net.nohgz.lodestonefun.client.vfx;
 
 import net.minecraft.client.particle.ParticleRenderType;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.monster.Vex;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.nohgz.lodestonefun.registry.client.ParticleRegistry;
@@ -36,6 +37,13 @@ public class WorldParticleEffects {
                 .spawn(level,pos.x,pos.y,pos.z);
     }
 
+    public static void spawnBoomParticle(Level level, Vec3 pos, Color explosionColor) {
+
+        Color endingColor = explosionColor.darker().darker().darker();
+
+        spawnBoomParticle(level,pos, explosionColor,endingColor);
+    }
+
     public static void spawnBoomParticle (Level level, Vec3 pos, Color colorStart, Color colorEnd) {
 
         Random rand = new Random();
@@ -61,13 +69,13 @@ public class WorldParticleEffects {
                         pos.x,
                         pos.y,
                         pos.z,
-                        50
+                        75
                 )
         ;
 
         //aftermath smoke
-        WorldParticleBuilder.create(LodestoneParticleRegistry.WISP_PARTICLE)
-                .setScaleData(GenericParticleData.create(rand.nextFloat(1.5f,2f), 3.5f * rand.nextFloat(1.5f,2f)).build())
+        WorldParticleBuilder.create(LodestoneParticleRegistry.SMOKE_PARTICLE)
+                .setScaleData(GenericParticleData.create(1.2f * rand.nextFloat(1.5f,2f), 4f * rand.nextFloat(1.5f,2f)).build())
                 .setTransparencyData(GenericParticleData.create(1.0f, 0.0f).build())
                 .setColorData(ColorParticleData.create(startingSmokeColor,endingSmokeColor).setCoefficient(1.4f).setEasing(Easing.QUARTIC_OUT).build())
                 .setSpinData(SpinParticleData.create(0.0f,0.02f).setSpinOffset((level.getGameTime() * 0.1f) % 6.28f).setEasing(Easing.QUARTIC_OUT).build())
@@ -84,7 +92,7 @@ public class WorldParticleEffects {
                         pos.x,
                         pos.y+1,
                         pos.z,
-                        25
+                        35
                 )
 
         ;

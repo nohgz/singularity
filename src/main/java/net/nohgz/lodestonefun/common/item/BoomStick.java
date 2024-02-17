@@ -35,9 +35,9 @@ public class BoomStick extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         BlockHitResult ray = RayHelpers.blockRayTraceResult(level, player, ClipContext.Fluid.NONE, 50f);
         Vec3 lookPos = ray.getLocation();
-        
-        WorldParticleEffects.spawnBoomParticle(level, lookPos, new Color(252, 151, 95),  new Color(87, 19, 6));
-        ShakeEffects.thugShaker(5,0.45f);
+
+        WorldParticleEffects.spawnBoomParticle(level, lookPos, new Color(91, 241, 52));
+        ShakeEffects.thugShaker(4,0.45f);
 
         level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.GENERIC_EXPLODE, SoundSource.PLAYERS, 1.0F, 0.5F);
         return super.use(level,player,hand);
