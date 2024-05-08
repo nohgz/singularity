@@ -1,8 +1,9 @@
-package net.nohgz.singularity.registry.common.item.tabs;
+package net.nohgz.singularity.registry.common.tabs;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.nohgz.singularity.SingularityMod;
 
 import java.util.function.Supplier;

@@ -9,11 +9,11 @@ public class WavePostProcessor extends PostProcessor {
 
     public static final WavePostProcessor INSTANCE = new WavePostProcessor();
 
-    /*
+
     static {
         INSTANCE.setActive(false);
     }
-     */
+
 
     @Override
     public ResourceLocation getPostChainLocation() {

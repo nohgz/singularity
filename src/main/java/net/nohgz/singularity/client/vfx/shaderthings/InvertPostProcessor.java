@@ -5,9 +5,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.nohgz.singularity.SingularityMod;
 import team.lodestar.lodestone.systems.postprocess.PostProcessor;
 
-public class FlamePostProcessor extends PostProcessor {
+public class InvertPostProcessor extends PostProcessor {
 
-    public static final FlamePostProcessor INSTANCE = new FlamePostProcessor();
+    public static final InvertPostProcessor INSTANCE = new InvertPostProcessor();
 
 
     static {
@@ -16,11 +16,9 @@ public class FlamePostProcessor extends PostProcessor {
 
 
 
-
-
     @Override
     public ResourceLocation getPostChainLocation() {
-        return SingularityMod.singularityPath("flame_post");
+        return SingularityMod.singularityPath("invert_post");
     }
 
     @Override

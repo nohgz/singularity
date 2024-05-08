@@ -22,7 +22,6 @@ import java.awt.*;
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class BoomStick extends Item {
     public BoomStick(Properties properties) {
-
         super(properties);
     }
 
@@ -32,7 +31,7 @@ public class BoomStick extends Item {
         BlockHitResult ray = RayHelpers.blockRayTraceResult(level, player, ClipContext.Fluid.NONE, 50f);
         Vec3 lookPos = ray.getLocation();
 
-        WorldParticleEffects.spawnBoomParticle(level, lookPos, new Color(178, 52, 241));
+        WorldParticleEffects.spawnBoomParticle(level, lookPos, new Color(153, 99, 199));
         ShakeEffects.thugShaker(4,0.45f);
 
         level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.GENERIC_EXPLODE, SoundSource.PLAYERS, 1.0F, 0.5F);

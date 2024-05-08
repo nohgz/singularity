@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.nohgz.singularity.registry.common.block.BlockRegistry;
 import net.nohgz.singularity.registry.common.item.ItemRegistry;
 import org.slf4j.Logger;
 
@@ -28,6 +29,7 @@ public class SingularityMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemRegistry.register(modEventBus);
+        BlockRegistry.register(modEventBus);
         PARTICLES.register(modEventBus);
 
         // Register the commonSetup method for modloading

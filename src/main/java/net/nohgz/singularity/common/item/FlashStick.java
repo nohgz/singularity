@@ -26,4 +26,6 @@ public class FlashStick extends Item {
         level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.CAT_AMBIENT, SoundSource.PLAYERS, 1.0F, 1F);
         return super.use(level,player,hand);
     }
+
+
 }

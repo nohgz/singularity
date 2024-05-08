@@ -1,0 +1,21 @@
+package net.nohgz.singularity.registry.common.block;
+
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
+import net.nohgz.singularity.SingularityMod;
+
+public class BlockTagRegistry {
+
+    public static final TagKey<Block> WOOD_BLOCKS = singularityTag("wood_blocks");
+
+    private static TagKey<Block> modTag(String path) {
+        return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(path));
+    }
+
+    private static TagKey<Block> singularityTag(String path) {
+        return TagKey.create(Registry.BLOCK_REGISTRY, SingularityMod.singularityPath(path));
+    }
+
+}
