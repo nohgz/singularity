@@ -7,13 +7,23 @@ import team.lodestar.lodestone.systems.block.LodestoneBlockProperties;
 
 public class SingularityBlockProperties
 {
-    public static LodestoneBlockProperties WOOD_LIKE()
+    public static LodestoneBlockProperties GRAVIWOOD()
     {
         return new LodestoneBlockProperties(Material.WOOD, MaterialColor.WOOD)
-                .addTag(BlockTagRegistry.WOOD_BLOCKS)
+                .addTag(BlockTagRegistry.GRAVIWOOD)
                 .needsAxe()
                 .sound(SoundType.WOOD)
                 .strength(1.75F, 2.0F)
+                ;
+    }
+
+    public static LodestoneBlockProperties GRAVIWOOD_LEAVES()
+    {
+        return new LodestoneBlockProperties(Material.LEAVES, MaterialColor.COLOR_BLACK)
+                .addTag(BlockTagRegistry.GRAVIWOOD_LEAVES)
+                .needsHoe()
+                .sound(SoundType.AZALEA_LEAVES)
+                .strength(0.25f,0f)
                 ;
     }
 

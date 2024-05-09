@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "singularity:block/graviwood_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "singularity:block/graviwood_wood"
+    },
+    "axis=z": {
+      "model": "singularity:block/graviwood_wood",
+      "x": 90
+    }
+  }
+}

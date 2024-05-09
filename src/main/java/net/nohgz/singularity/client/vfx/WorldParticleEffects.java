@@ -55,7 +55,7 @@ public class WorldParticleEffects {
         WorldParticleBuilder.create(LodestoneParticleRegistry.SMOKE_PARTICLE)
                 .setScaleData(GenericParticleData.create(2f * rand.nextFloat(1.5f,2.5f)).setEasing(Easing.EXPO_OUT).build())
                 .setTransparencyData(GenericParticleData.create(1.0f, 0.0f).build())
-                .setColorData(ColorParticleData.create(colorStart,colorEnd).setCoefficient(1.4f).setEasing(Easing.QUARTIC_OUT).build())
+                .setColorData(ColorParticleData.create(colorStart,colorEnd).setCoefficient(0.7f).setEasing(Easing.QUARTIC_OUT).build())
                 .setSpinData(SpinParticleData.create(0.0f,0.01f).setSpinOffset((level.getGameTime() * 0.1f) % 6.28f).setEasing(Easing.QUARTIC_OUT).build())
                 .setLifetime(60)
                 .addMotion(0,0,0)

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "singularity:block/graviwood_sapling"
+  }
+}

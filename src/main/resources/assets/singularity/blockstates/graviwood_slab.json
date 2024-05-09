@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "singularity:block/graviwood_slab"
+    },
+    "type=double": {
+      "model": "singularity:block/graviwood_planks"
+    },
+    "type=top": {
+      "model": "singularity:block/graviwood_slab_top"
+    }
+  }
+}

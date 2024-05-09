@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "singularity:block/graviwood_door_bottom",
+    "top": "singularity:block/graviwood_door_top"
+  }
+}

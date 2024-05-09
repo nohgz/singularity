@@ -1,9 +1,27 @@
 {
   "itemGroup.singularity_the_doodads" : "doodads",
+  "itemGroup.singularity_freaky_ahh" : "Singularity",
 
   "block.singularity.singularity_block" :  "what the fuck",
   "block.singularity.evil_ahh_block" :  "evil ahh block",
   "block.singularity.explosive_ahh_block" :  "boom bitch",
+
+  "block.singularity.graviwood_leaves" : "Graviwood Leaves",
+  "block.singularity.graviwood_planks" : "Graviwood Planks",
+  "block.singularity.graviwood_slab" : "Graviwood Slab",
+  "block.singularity.graviwood_button" : "Graviwood Button",
+  "block.singularity.graviwood_pressure_plate" : "Graviwood Pressure Plate",
+  "block.singularity.graviwood_door" : "Graviwood Door",
+  "block.singularity.graviwood_trapdoor" : "Graviwood Trapdoor",
+  "block.singularity.graviwood_fence" : "Graviwood Fence",
+  "block.singularity.graviwood_fence_gate" : "Graviwood Fence Gate",
+  "block.singularity.graviwood_sign" : "Graviwood Sign",
+  "block.singularity.graviwood_stairs" : "Graviwood Sign",
+
+  "block.singularity.graviwood_log" : "Graviwood Log",
+  "block.singularity.graviwood_wood" : "Graviwood",
+  "block.singularity.stripped_graviwood_log" : "Stripped Graviwood Log",
+  "block.singularity.stripped_graviwood_wood" : "Stripped Graviwood",
 
   "item.singularity.particle_stick" : "THE SILLY",
   "item.singularity.boom_stick" : "heheheha",

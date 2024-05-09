@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "singularity:block/stripped_graviwood_log_top",
+    "side": "singularity:block/stripped_graviwood_log"
+  }
+}
