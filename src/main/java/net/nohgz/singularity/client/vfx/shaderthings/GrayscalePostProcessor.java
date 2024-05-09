@@ -9,12 +9,9 @@ public class GrayscalePostProcessor extends PostProcessor {
 
     public static final GrayscalePostProcessor INSTANCE = new GrayscalePostProcessor();
 
-
     static {
         INSTANCE.setActive(false);
     }
-
-
 
     @Override
     public ResourceLocation getPostChainLocation() {

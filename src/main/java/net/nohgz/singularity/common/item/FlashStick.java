@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class FlashStick extends Item {
-    Minecraft minecraft = Minecraft.getInstance();
+    private boolean shaderToggle = true;
 
     public FlashStick(Properties properties) {
         super(properties);
@@ -23,9 +23,21 @@ public class FlashStick extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+
+        if (!level.isClientSide() && hand.equals(InteractionHand.MAIN_HAND))
+        {
+            System.out.println("ONE CLICKY!!!");
+        }
+
         level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.CAT_AMBIENT, SoundSource.PLAYERS, 1.0F, 1F);
         return super.use(level,player,hand);
     }
 
+    private void setShaderToggle(boolean toggle) {
+        this.shaderToggle = toggle;
+    }
 
+    private boolean getShaderToggle() {
+        return this.shaderToggle;
+    }
 }

@@ -14,7 +14,17 @@ public class SingularityBlockProperties
                 .needsAxe()
                 .sound(SoundType.WOOD)
                 .strength(1.75F, 4.0F)
-            ;
+                ;
+    }
+
+    public static LodestoneBlockProperties INFECTION()
+    {
+        return new LodestoneBlockProperties(Material.SCULK, MaterialColor.COLOR_BLACK)
+                .addTag(BlockTagRegistry.INFECTION_BLOCKS)
+                .needsPickaxe()
+                .sound(SoundType.SCULK)
+                .strength(999999999.0F,18000000.0F )
+                ;
     }
 
 }

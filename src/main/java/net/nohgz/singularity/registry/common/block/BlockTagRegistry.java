@@ -9,6 +9,8 @@ import net.nohgz.singularity.SingularityMod;
 public class BlockTagRegistry {
 
     public static final TagKey<Block> WOOD_BLOCKS = singularityTag("wood_blocks");
+    public static final TagKey<Block> INFECTION_BLOCKS = singularityTag("infection_blocks");
+
 
     private static TagKey<Block> modTag(String path) {
         return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(path));
