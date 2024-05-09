@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "singularity:block/explosive_ahh_block"
+  }
+}

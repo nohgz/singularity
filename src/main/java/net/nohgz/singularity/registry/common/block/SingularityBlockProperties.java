@@ -13,7 +13,7 @@ public class SingularityBlockProperties
                 .addTag(BlockTagRegistry.WOOD_BLOCKS)
                 .needsAxe()
                 .sound(SoundType.WOOD)
-                .strength(1.75F, 4.0F)
+                .strength(1.75F, 2.0F)
                 ;
     }
 
