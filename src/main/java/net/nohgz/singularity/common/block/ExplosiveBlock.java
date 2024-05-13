@@ -22,6 +22,7 @@ public class ExplosiveBlock extends Block {
         if (pEntity instanceof LivingEntity) {
             if (pEntity.hurt(DamageSource.WITHER,5.0f)) {
                 pLevel.explode(pEntity, pPos.getX(), pPos.getY(), pPos.getZ(), 4.0F, Explosion.BlockInteraction.DESTROY);
+                pLevel.playLocalSound((double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, SoundEvents.ALLAY_DEATH, SoundSource.BLOCKS, 1.0F, 0.5F, false);
             };
         }
     }

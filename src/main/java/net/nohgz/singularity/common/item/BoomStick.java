@@ -13,6 +13,7 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -60,6 +61,7 @@ public class BoomStick extends Item {
         WorldParticleEffects.spawnBoomParticle(level, lookPos, explosionColor);
         ShakeEffects.thugShaker(4,0.45f);
 
+        // I should probably use like a mixin or something but eh
         SillyHelpers helpers = new SillyHelpers();
         helpers.nonParticleExplode(
                 level,
