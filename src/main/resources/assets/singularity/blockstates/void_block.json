@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "singularity:block/void_block"
+    }
+  }
+}

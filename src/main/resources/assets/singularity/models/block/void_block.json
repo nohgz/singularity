@@ -1,0 +1,6 @@
+{
+  "render_type": "singularity:end_portal_copy",
+  "textures": {
+    "particle": "minecraft:block/obsidian"
+  }
+}

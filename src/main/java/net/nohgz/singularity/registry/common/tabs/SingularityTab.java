@@ -1,5 +1,6 @@
 package net.nohgz.singularity.registry.common.tabs;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -16,6 +17,7 @@ public class SingularityTab extends CreativeModeTab {
         super(SingularityMod.MODID + "_" + name);
         this.icon = icon;
     }
+
 
     @Override
     public ItemStack makeIcon() {

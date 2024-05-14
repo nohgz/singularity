@@ -2,6 +2,7 @@ package net.nohgz.singularity.registry.common.block;
 
 
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -9,6 +10,8 @@ import net.minecraftforge.registries.RegistryObject;
 import net.nohgz.singularity.common.block.DamageBlock;
 import net.nohgz.singularity.common.block.ExplosiveBlock;
 import net.nohgz.singularity.common.block.SingularityBlock;
+import net.nohgz.singularity.common.block.VoidBlock;
+import net.nohgz.singularity.common.block.blockentity.VoidBlockEntity;
 import team.lodestar.lodestone.systems.block.LodestoneLogBlock;
 import team.lodestar.lodestone.systems.block.sign.LodestoneStandingSignBlock;
 import team.lodestar.lodestone.systems.block.sign.LodestoneWallSignBlock;
@@ -27,6 +30,8 @@ public class BlockRegistry {
     public static final RegistryObject<Block> SINGULARITY_BLOCK = BLOCKS.register("singularity_block", () -> new SingularityBlock(SingularityBlockProperties.GRAVIWOOD()));
     public static final RegistryObject<Block> EVIL_BLOCK = BLOCKS.register("evil_ahh_block", () -> new DamageBlock(SingularityBlockProperties.INFECTION()));
     public static final RegistryObject<Block> BOOM_BLOCK = BLOCKS.register("explosive_ahh_block", () -> new ExplosiveBlock(SingularityBlockProperties.GRAVIWOOD()));
+
+    public static final RegistryObject<Block> VOID_BLOCK = BLOCKS.register("void_block", () -> new VoidBlock(SingularityBlockProperties.INFECTION()));
 
     //region graviwood
     //public static final RegistryObject<Block> GRAVIWOOD_SAPLING = BLOCKS.register("graviwood_sapling", () -> new SaplingBlock(SingularityBlockProperties.GRAVIWOOD_SAPLING().setCutoutRenderType().randomTicks(), FeatureRegistry.GRAVIWOOD_TREE));
