@@ -37,8 +37,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> FLASH_STICK = ITEMS.register("flash_stick", () -> new FlashStick(DEBUG_PROPERTIES()));
     public static final RegistryObject<Item> SINGULARITY_BLOCK = ITEMS.register("singularity_block", () -> new BlockItem(BlockRegistry.SINGULARITY_BLOCK.get(), FREAKY()));
     public static final RegistryObject<Item> EVIL_BLOCK = ITEMS.register("evil_ahh_block", () -> new BlockItem(BlockRegistry.EVIL_BLOCK.get(), FREAKY()));
-    public static final RegistryObject<Item> BOOM_BLOCK = ITEMS.register("boom_block", () -> new BlockItem(BlockRegistry.VOID_BLOCK.get(), DEBUG_PROPERTIES()));
-
+    public static final RegistryObject<Item> BOOM_BLOCK = ITEMS.register("explosive_ahh_block", () -> new BlockItem(BlockRegistry.BOOM_BLOCK.get(), DEBUG_PROPERTIES()));
     public static final RegistryObject<Item> VOID_BLOCK = ITEMS.register("void_block", () -> new BlockItem(BlockRegistry.VOID_BLOCK.get(), DEBUG_PROPERTIES()));
 
     //region graviwood
