@@ -57,6 +57,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> GRAVIWOOD_FENCE_GATE = ITEMS.register("graviwood_fence_gate", () -> new BlockItem(BlockRegistry.GRAVIWOOD_FENCE_GATE.get(), FREAKY()));
     public static final RegistryObject<Item> GRAVIWOOD_SIGN = ITEMS.register("graviwood_sign", () -> new BlockItem(BlockRegistry.GRAVIWOOD_SIGN.get(), FREAKY()));
 
+    public static final RegistryObject<Item> GRAVIWOOD_LAMP = ITEMS.register("graviwood_lamp", () -> new BlockItem(BlockRegistry.GRAVIWOOD_LAMP.get(), FREAKY()));
 
 
     public static void register(IEventBus eventBus) {

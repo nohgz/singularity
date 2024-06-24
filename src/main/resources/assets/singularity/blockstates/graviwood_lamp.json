@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true" : { "model" : "singularity:block/graviwood_lamp_on" },
+    "lit=false" : { "model" : "singularity:block/graviwood_lamp_off" }
+  }
+}

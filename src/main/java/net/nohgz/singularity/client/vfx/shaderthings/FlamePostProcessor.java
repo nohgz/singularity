@@ -14,10 +14,6 @@ public class FlamePostProcessor extends PostProcessor {
         INSTANCE.setActive(false);
     }
 
-
-
-
-
     @Override
     public ResourceLocation getPostChainLocation() {
         return SingularityMod.singularityPath("flame_post");

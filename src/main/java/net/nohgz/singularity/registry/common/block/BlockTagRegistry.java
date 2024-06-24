@@ -12,10 +12,8 @@ public class BlockTagRegistry {
     public static final TagKey<Block> STRIPPED_LOGS = singularityTag("stripped_logs");
     public static final TagKey<Block> GRAVIWOOD_LOGS = singularityTag("graviwood_logs");
     public static final TagKey<Block> GRAVIWOOD_LEAVES = singularityTag("graviwood_leaves");
+    public static final TagKey<Block> GRAVIWOOD_LAMP = singularityTag("graviwood_lamp");
     public static final TagKey<Block> GRAVIWOOD = singularityTag("graviwood");
-
-
-
 
 
 

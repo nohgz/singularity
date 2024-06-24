@@ -32,6 +32,4 @@ public class DamageBlock extends Block {
             pLevel.playLocalSound((double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, SoundEvents.WITCH_CELEBRATE, SoundSource.BLOCKS, 1.0F + pRandom.nextFloat(), pRandom.nextFloat() * 0.2F + 0.1F, false);
         }
     }
-
-
 }

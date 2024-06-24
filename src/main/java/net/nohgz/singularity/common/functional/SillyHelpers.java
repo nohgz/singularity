@@ -15,5 +15,4 @@ public class SillyHelpers {
         explosion.explode();
         explosion.finalizeExplosion(false);
     }
-
 }

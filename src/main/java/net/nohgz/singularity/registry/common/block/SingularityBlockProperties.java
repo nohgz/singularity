@@ -3,6 +3,7 @@ package net.nohgz.singularity.registry.common.block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+import net.nohgz.singularity.common.block.LampBlock;
 import team.lodestar.lodestone.systems.block.LodestoneBlockProperties;
 
 public class SingularityBlockProperties
@@ -14,6 +15,17 @@ public class SingularityBlockProperties
                 .needsAxe()
                 .sound(SoundType.WOOD)
                 .strength(1.75F, 2.0F)
+                ;
+    }
+
+    public static LodestoneBlockProperties GRAVIWOOD_LAMP()
+    {
+        return new LodestoneBlockProperties(Material.WOOD, MaterialColor.WOOD)
+                .addTag(BlockTagRegistry.GRAVIWOOD)
+                .needsAxe()
+                .sound(SoundType.WOOD)
+                .strength(1.75F, 2.0F)
+                .lightLevel(state->state.getValue(LampBlock.LIT) ? 15 : 0)
                 ;
     }
 

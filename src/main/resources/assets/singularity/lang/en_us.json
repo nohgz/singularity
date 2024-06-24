@@ -17,6 +17,7 @@
   "block.singularity.graviwood_fence_gate" : "Graviwood Fence Gate",
   "block.singularity.graviwood_sign" : "Graviwood Sign",
   "block.singularity.graviwood_stairs" : "Graviwood Sign",
+  "block.singularity.graviwood_lamp" : "Graviwood Lamp",
 
   "block.singularity.graviwood_log" : "Graviwood Log",
   "block.singularity.graviwood_wood" : "Graviwood",
@@ -26,5 +27,8 @@
   "item.singularity.particle_stick" : "THE SILLY",
   "item.singularity.boom_stick" : "heheheha",
   "item.singularity.flash_stick" : "HAHA YOUR EYES ARE GONE",
-  "item.singularity.sphere_stick" : "This shouldn't be possible..."
+  "item.singularity.sphere_stick" : "This shouldn't be possible...",
+
+  "key.category.singularity" : "Singularity",
+  "key.singularity.toggle_shader" : "Toggle Shader"
 }

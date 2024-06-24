@@ -7,10 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.nohgz.singularity.common.block.DamageBlock;
-import net.nohgz.singularity.common.block.ExplosiveBlock;
-import net.nohgz.singularity.common.block.SingularityBlock;
-import net.nohgz.singularity.common.block.VoidBlock;
+import net.nohgz.singularity.common.block.*;
 import net.nohgz.singularity.common.block.blockentity.VoidBlockEntity;
 import team.lodestar.lodestone.systems.block.LodestoneLogBlock;
 import team.lodestar.lodestone.systems.block.sign.LodestoneStandingSignBlock;
@@ -59,6 +56,8 @@ public class BlockRegistry {
 
     public static final RegistryObject<Block> GRAVIWOOD_SIGN = BLOCKS.register("graviwood_sign", () -> new LodestoneStandingSignBlock(SingularityBlockProperties.GRAVIWOOD().addTags(SIGNS, STANDING_SIGNS).noOcclusion().noCollission(), WoodRegistry.GRAVIWOOD));
     public static final RegistryObject<Block> GRAVIWOOD_WALL_SIGN = BLOCKS.register("graviwood_wall_sign", () -> new LodestoneWallSignBlock(SingularityBlockProperties.GRAVIWOOD().addTags(SIGNS, WALL_SIGNS).noOcclusion().noCollission(), WoodRegistry.GRAVIWOOD));
+    public static final RegistryObject<LampBlock> GRAVIWOOD_LAMP = BLOCKS.register("graviwood_lamp", () -> new LampBlock(SingularityBlockProperties.GRAVIWOOD_LAMP()));
+
     //endregion
 
     public static void register(IEventBus eventBus) {
