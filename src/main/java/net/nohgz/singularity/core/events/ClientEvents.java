@@ -14,6 +14,8 @@ import net.nohgz.singularity.client.vfx.shaderthings.FlamePostProcessor;
 import net.nohgz.singularity.client.vfx.shaderthings.GrayscalePostProcessor;
 import net.nohgz.singularity.client.vfx.shaderthings.InvertPostProcessor;
 import net.nohgz.singularity.client.vfx.shaderthings.WavePostProcessor;
+import net.nohgz.singularity.core.networking.ModMessages;
+import net.nohgz.singularity.core.networking.packet.TextC2SPacket;
 import net.nohgz.singularity.core.util.Keybindings;
 import team.lodestar.lodestone.systems.postprocess.PostProcessHandler;
 
@@ -25,6 +27,8 @@ public class ClientEvents {
             if (Keybindings.SHADER_TOGGLE_KEY.consumeClick()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("Pressed a key!"));
                 InvertPostProcessor.toggleInvert();
+                GrayscalePostProcessor.toggleGrayscale();
+                ModMessages.sendToServer(new TextC2SPacket());
             }
         }
     }

@@ -17,7 +17,6 @@ import java.util.Random;
 
 public class LampBlock extends Block {
 
-    Random randy = new Random();
 
     public static final BooleanProperty LIT = BooleanProperty.create("lit");
 
@@ -30,7 +29,7 @@ public class LampBlock extends Block {
         if (!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND)
             pLevel.setBlock(pPos, pState.cycle(LIT), 3);
 
-        pLevel.playLocalSound((double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, SoundEvents.UI_BUTTON_CLICK, SoundSource.BLOCKS, 0.2F + randy.nextFloat() * 0.5f, randy.nextFloat() * 0.2F + 0.1F, false);
+        pLevel.playLocalSound((double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, SoundEvents.UI_BUTTON_CLICK, SoundSource.BLOCKS, 0.2F + pLevel.random.nextFloat() * 0.5f, pLevel.random.nextFloat() * 0.2F + 0.1F, false);
 
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
     }

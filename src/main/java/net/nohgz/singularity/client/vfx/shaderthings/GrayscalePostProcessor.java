@@ -9,8 +9,15 @@ public class GrayscalePostProcessor extends PostProcessor {
 
     public static final GrayscalePostProcessor INSTANCE = new GrayscalePostProcessor();
 
+    private static boolean toggleGrayscale = false;
+
     static {
-        INSTANCE.setActive(false);
+        INSTANCE.setActive(toggleGrayscale);
+    }
+
+    public static void toggleGrayscale() {
+        toggleGrayscale = !toggleGrayscale;
+        INSTANCE.setActive(toggleGrayscale);
     }
 
     @Override

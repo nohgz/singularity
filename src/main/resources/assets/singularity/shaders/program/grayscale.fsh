@@ -23,12 +23,5 @@ void main() {
     // Convert the original color to grayscale
     vec4 grayscaleColor = generic_desaturate(originalColor.rgb,1);
 
-    // Calculate the negative color (invert grayscale)
-    vec4 negativeColor = 1 - grayscaleColor;
-
-    // Interpolate between the grayscale and the negative grayscale using the Time variable
-    vec4 transitionColor = mix(grayscaleColor, negativeColor, abs(sin(Time * 6.28318531f))); // Lerp between grayscale and negative
-
-    // Output the final color with alpha set to 1.0
-    fragColor = vec4(transitionColor);
+    fragColor = vec4(grayscaleColor);
 }
