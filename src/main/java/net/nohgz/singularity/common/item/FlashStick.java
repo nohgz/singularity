@@ -21,9 +21,7 @@ import java.util.List;
 
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class FlashStick extends Item {
-    private boolean shaderToggle = true;
-
+public class FlashStick extends GlowyItem {
     public FlashStick(Properties properties) {
         super(properties);
     }
@@ -52,11 +50,4 @@ public class FlashStick extends Item {
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
-    private void setShaderToggle(boolean toggle) {
-        this.shaderToggle = toggle;
-    }
-
-    private boolean getShaderToggle() {
-        return this.shaderToggle;
-    }
 }
