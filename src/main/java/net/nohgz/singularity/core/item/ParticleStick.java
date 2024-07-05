@@ -1,4 +1,4 @@
-package net.nohgz.singularity.common.item;
+package net.nohgz.singularity.core.item;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -15,7 +15,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod;
 import net.nohgz.singularity.client.vfx.WorldParticleEffects;
 import net.nohgz.singularity.client.vfx.ShakeEffects;
-import net.nohgz.singularity.common.functional.RayHelpers;
+import net.nohgz.singularity.core.util.RayHelpers;
 
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)

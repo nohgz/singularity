@@ -1,19 +1,15 @@
-package net.nohgz.singularity.common.item;
+package net.nohgz.singularity.core.item;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Explosion;
-import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -21,9 +17,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod;
 import net.nohgz.singularity.client.vfx.ShakeEffects;
 import net.nohgz.singularity.client.vfx.WorldParticleEffects;
-import net.nohgz.singularity.common.functional.RayHelpers;
-import net.nohgz.singularity.common.functional.SillyHelpers;
-import org.jetbrains.annotations.NotNull;
+import net.nohgz.singularity.core.util.RayHelpers;
+import net.nohgz.singularity.core.util.SillyHelpers;
 
 import java.awt.*;
 import java.util.ArrayList;

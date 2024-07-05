@@ -1,4 +1,4 @@
-package net.nohgz.singularity.common.item;
+package net.nohgz.singularity.core.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

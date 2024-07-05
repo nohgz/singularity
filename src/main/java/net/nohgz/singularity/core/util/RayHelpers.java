@@ -1,4 +1,4 @@
-package net.nohgz.singularity.common.functional;
+package net.nohgz.singularity.core.util;
 
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;

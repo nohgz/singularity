@@ -1,4 +1,4 @@
-package net.nohgz.singularity.common.block;
+package net.nohgz.singularity.core.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;

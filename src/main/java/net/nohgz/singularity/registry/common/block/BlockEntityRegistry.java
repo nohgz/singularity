@@ -5,7 +5,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.nohgz.singularity.common.block.blockentity.VoidBlockEntity;
+import net.nohgz.singularity.core.block.blockentity.VoidBlockEntity;
 
 import static net.nohgz.singularity.SingularityMod.MODID;
 
@@ -19,5 +19,3 @@ public class BlockEntityRegistry {
     }
 
 }
-
-

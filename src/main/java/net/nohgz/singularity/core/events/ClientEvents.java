@@ -1,6 +1,5 @@
 package net.nohgz.singularity.core.events;
 
-import io.netty.channel.epoll.EpollServerChannelConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
@@ -15,8 +14,8 @@ import net.nohgz.singularity.client.vfx.shaderthings.GrayscalePostProcessor;
 import net.nohgz.singularity.client.vfx.shaderthings.InvertPostProcessor;
 import net.nohgz.singularity.client.vfx.shaderthings.WavePostProcessor;
 import net.nohgz.singularity.core.networking.ModMessages;
-import net.nohgz.singularity.core.networking.packet.TextC2SPacket;
 import net.nohgz.singularity.core.util.Keybindings;
+import net.nohgz.singularity.core.networking.packet.TextC2SPacket;
 import team.lodestar.lodestone.systems.postprocess.PostProcessHandler;
 
 public class ClientEvents {

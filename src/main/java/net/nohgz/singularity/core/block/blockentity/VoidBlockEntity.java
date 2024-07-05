@@ -1,4 +1,4 @@
-package net.nohgz.singularity.common.block.blockentity;
+package net.nohgz.singularity.core.block.blockentity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

@@ -3,7 +3,7 @@ package net.nohgz.singularity.registry.common.block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
-import net.nohgz.singularity.common.block.LampBlock;
+import net.nohgz.singularity.core.block.LampBlock;
 import team.lodestar.lodestone.systems.block.LodestoneBlockProperties;
 
 public class SingularityBlockProperties

@@ -2,18 +2,14 @@ package net.nohgz.singularity.registry.common.block;
 
 
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.nohgz.singularity.common.block.*;
-import net.nohgz.singularity.common.block.blockentity.VoidBlockEntity;
+import net.nohgz.singularity.core.block.*;
 import team.lodestar.lodestone.systems.block.LodestoneLogBlock;
 import team.lodestar.lodestone.systems.block.sign.LodestoneStandingSignBlock;
 import team.lodestar.lodestone.systems.block.sign.LodestoneWallSignBlock;
-
-import java.awt.*;
 
 import static net.minecraft.tags.BlockTags.*;
 import static net.minecraft.world.level.block.PressurePlateBlock.Sensitivity.EVERYTHING;

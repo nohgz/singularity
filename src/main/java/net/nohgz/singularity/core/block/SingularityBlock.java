@@ -1,4 +1,4 @@
-package net.nohgz.singularity.common.block;
+package net.nohgz.singularity.core.block;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;

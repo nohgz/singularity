@@ -1,4 +1,4 @@
-package net.nohgz.singularity.common.functional;
+package net.nohgz.singularity.core.util;
 
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
