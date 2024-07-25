@@ -1,4 +1,4 @@
-package net.nohgz.singularity.registry.common.block;
+package net.nohgz.singularity.registry.core.block;
 
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.fml.common.Mod;

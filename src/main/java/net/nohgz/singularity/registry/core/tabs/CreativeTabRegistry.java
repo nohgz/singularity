@@ -1,7 +1,5 @@
-package net.nohgz.singularity.registry.common.tabs;
-import net.minecraft.world.item.Item;
-import net.nohgz.singularity.registry.common.block.BlockRegistry;
-import net.nohgz.singularity.registry.common.item.ItemRegistry;
+package net.nohgz.singularity.registry.core.tabs;
+import net.nohgz.singularity.registry.core.item.ItemRegistry;
 
 public class CreativeTabRegistry {
     public static final SingularityTab DEBUG = new SingularityTab("the_doodads", ItemRegistry.PARTICLE_STICK);

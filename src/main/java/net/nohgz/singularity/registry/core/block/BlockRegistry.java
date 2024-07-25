@@ -1,4 +1,4 @@
-package net.nohgz.singularity.registry.common.block;
+package net.nohgz.singularity.registry.core.block;
 
 
 import net.minecraft.world.level.block.*;
@@ -15,8 +15,8 @@ import static net.minecraft.tags.BlockTags.*;
 import static net.minecraft.world.level.block.PressurePlateBlock.Sensitivity.EVERYTHING;
 import static net.minecraftforge.common.Tags.Blocks.FENCE_GATES_WOODEN;
 import static net.nohgz.singularity.SingularityMod.MODID;
-import static net.nohgz.singularity.registry.common.block.BlockTagRegistry.GRAVIWOOD_LOGS;
-import static net.nohgz.singularity.registry.common.block.BlockTagRegistry.STRIPPED_LOGS;
+import static net.nohgz.singularity.registry.core.block.BlockTagRegistry.GRAVIWOOD_LOGS;
+import static net.nohgz.singularity.registry.core.block.BlockTagRegistry.STRIPPED_LOGS;
 
 public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
@@ -55,6 +55,10 @@ public class BlockRegistry {
     public static final RegistryObject<LampBlock> GRAVIWOOD_LAMP = BLOCKS.register("graviwood_lamp", () -> new LampBlock(SingularityBlockProperties.GRAVIWOOD_LAMP()));
 
     //endregion
+
+
+    // block entity base things idek what to call them lol
+    public static final RegistryObject<SingularityCompressorBlock> SINGULARITY_COMPRESSOR = BLOCKS.register("singularity_compressor", () -> new SingularityCompressorBlock(SingularityBlockProperties.GRAVIWOOD().noOcclusion().requiresCorrectToolForDrops()));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

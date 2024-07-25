@@ -1,4 +1,4 @@
-package net.nohgz.singularity.registry.common.tabs;
+package net.nohgz.singularity.registry.core.tabs;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;

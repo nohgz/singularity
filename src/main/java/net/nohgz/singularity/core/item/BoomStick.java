@@ -21,27 +21,13 @@ import net.nohgz.singularity.core.util.RayHelpers;
 import net.nohgz.singularity.core.util.SillyHelpers;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class BoomStick extends Item {
-    private final List<Color> rainbowColors;
-    private int colorIndex;
 
     public BoomStick(Properties properties) {
         super(properties);
-        rainbowColors = new ArrayList<>(List.of(
-                new Color(255, 91, 91),    // Red
-                new Color(255, 203, 108),  // Orange
-                new Color(255, 255, 126),  // Yellow
-                new Color(130, 255, 130),    // Green
-                new Color(133, 133, 255),    // Blue
-                new Color(196, 116, 255),   // Indigo
-                new Color(238, 130, 238) // Violet
-        ));
-        colorIndex = 0;
     }
 
     @Override
@@ -50,8 +36,7 @@ public class BoomStick extends Item {
         BlockHitResult ray = RayHelpers.blockRayTraceResult(level, player, ClipContext.Fluid.NONE, 50f);
         Vec3 lookPos = ray.getLocation();
 
-        Color explosionColor = rainbowColors.get(colorIndex);
-        colorIndex = (colorIndex + 1) % rainbowColors.size(); // Loop back when reaching the end
+        Color explosionColor = new Color(238, 130, 238);
 
         WorldParticleEffects.spawnBoomParticle(level, lookPos, explosionColor);
         ShakeEffects.thugShaker(4,0.45f);

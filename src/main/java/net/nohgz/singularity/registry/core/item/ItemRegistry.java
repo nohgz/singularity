@@ -1,4 +1,4 @@
-package net.nohgz.singularity.registry.common.item;
+package net.nohgz.singularity.registry.core.item;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -9,8 +9,8 @@ import net.minecraftforge.registries.RegistryObject;
 import net.nohgz.singularity.core.item.BoomStick;
 import net.nohgz.singularity.core.item.FlashStick;
 import net.nohgz.singularity.core.item.ParticleStick;
-import net.nohgz.singularity.registry.common.block.BlockRegistry;
-import net.nohgz.singularity.registry.common.tabs.CreativeTabRegistry;
+import net.nohgz.singularity.registry.core.block.BlockRegistry;
+import net.nohgz.singularity.registry.core.tabs.CreativeTabRegistry;
 
 import static net.nohgz.singularity.SingularityMod.MODID;
 
@@ -54,6 +54,7 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> GRAVIWOOD_LAMP = ITEMS.register("graviwood_lamp", () -> new BlockItem(BlockRegistry.GRAVIWOOD_LAMP.get(), FREAKY()));
 
+    public static final RegistryObject<Item> SINGULARITY_COMPRESSOR = ITEMS.register("singularity_compressor", () -> new BlockItem(BlockRegistry.SINGULARITY_COMPRESSOR.get(), FREAKY()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

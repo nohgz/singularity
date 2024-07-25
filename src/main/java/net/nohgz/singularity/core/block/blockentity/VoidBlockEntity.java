@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.nohgz.singularity.registry.common.block.BlockEntityRegistry;
+import net.nohgz.singularity.registry.core.block.BlockEntityRegistry;
 
 public class VoidBlockEntity extends BlockEntity {
     protected VoidBlockEntity(BlockEntityType<?> pType, BlockPos pPos, BlockState pBlockState) {

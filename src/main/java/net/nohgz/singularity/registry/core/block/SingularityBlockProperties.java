@@ -1,4 +1,4 @@
-package net.nohgz.singularity.registry.common.block;
+package net.nohgz.singularity.registry.core.block;
 
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
